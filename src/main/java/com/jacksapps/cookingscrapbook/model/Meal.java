@@ -1,6 +1,8 @@
 package com.jacksapps.cookingscrapbook.model;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
@@ -18,9 +20,10 @@ public class Meal {
     @OneToMany
     private List<Ingredient> ingredients = new ArrayList<>();
 
-    private Image picture;
+    private File picture;
 
-    private List<String> notes = new ArrayList<>();
+    @OneToMany
+    private List<Comment> notes = new ArrayList<>();
 
     public Meal() {
     }
@@ -45,19 +48,19 @@ public class Meal {
         this.ingredients = ingredients;
     }
 
-    public Image getPicture() {
+    public File getPicture() {
         return picture;
     }
 
-    public void setPicture(Image picture) {
+    public void setPicture(File picture) {
         this.picture = picture;
     }
 
-    public List<String> getNotes() {
+    public List<Comment> getNotes() {
         return notes;
     }
 
-    public void setNotes(List<String> notes) {
+    public void setNotes(List<Comment> notes) {
         this.notes = notes;
     }
 }

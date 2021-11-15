@@ -17,4 +17,24 @@ public class Comment {
 
     public Comment() {
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public LocalDate getDateRecorded() {
+        return dateRecorded;
+    }
+
+    public void setDateRecorded(LocalDate dateRecorded) {
+        this.dateRecorded = dateRecorded;
+    }
 }
