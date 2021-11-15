@@ -11,8 +11,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String comment;
 
+    @Column
     private LocalDate dateRecorded;
 
     public Comment() {
