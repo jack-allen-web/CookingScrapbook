@@ -28,6 +28,13 @@ public class Meal {
     public Meal() {
     }
 
+    public Meal(String name, List<Ingredient> ingredients, File picture, List<Comment> notes) {
+        this.name = name;
+        this.ingredients = ingredients;
+        this.picture = picture;
+        this.notes = notes;
+    }
+
     public Long getId() {
         return id;
     }

@@ -18,6 +18,11 @@ public class Comment {
     public Comment() {
     }
 
+    public Comment(String comment, LocalDate dateRecorded) {
+        this.comment = comment;
+        this.dateRecorded = dateRecorded;
+    }
+
     public Long getId() {
         return id;
     }
